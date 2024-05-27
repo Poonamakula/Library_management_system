@@ -64,9 +64,9 @@ function Signup() {
         console.log(errors);
         return errors;
     };
-    if (goToLogin){
+     if (goToLogin){
         return <Navigate to ="/LoginPage"/>
-     }
+     } 
 
     return (
         <div className="bg-Img">
@@ -84,13 +84,13 @@ function Signup() {
                     <h1>Sign Up</h1>
                     <div className="ui form">
                         <div className="field">
-                            <label>Username</label>
+                            <label>Username</label> 
                             <input
                                 type="text"
                                 name="username"
                                 placeholder="Choose a username"
                                 value={formValues.username}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginLeft:"70px"}}
                             />
                           
                         </div>
@@ -102,7 +102,7 @@ function Signup() {
                                 name="email"
                                 placeholder="Email"
                                 value={formValues.email}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginLeft:"100px"}}
                             />
                        
                         </div>
@@ -114,7 +114,7 @@ function Signup() {
                                 name="phone"
                                 placeholder="Phone No"
                                 value={formValues.phone}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginLeft:"95px"}}
                             />
                         </div>
                         <p>{formErrors.phone}</p>
@@ -125,7 +125,7 @@ function Signup() {
                                 name="address"
                                 placeholder="Address"
                                 value={formValues.address}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginLeft:"88px"}}
                             />
                         </div>
                         <p>{formErrors.address}</p>
@@ -136,7 +136,7 @@ function Signup() {
                                 name="password"
                                 placeholder="Password"
                                 value={formValues.password}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginLeft:"80px"}}
                             />
                         </div>
                         <p>{formErrors.password}</p>
@@ -147,7 +147,7 @@ function Signup() {
                                 name="confirmPassword"
                                 placeholder="Confirm password"
                                 value={formValues.confirmPassword}
-                                onChange={handleChange}
+                                onChange={handleChange} style={{marginRight:"50px"}}
                             />
                         </div>
                         <p>{formErrors.confirmPassword}</p>

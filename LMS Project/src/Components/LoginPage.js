@@ -40,9 +40,9 @@ return errors;
     return (
         <div >
             <div className="login-box">
-            <h1 style={{textAlign: "center"}}>Login Page</h1>
+            <h1>Login Page</h1>
             {Object.keys(fieldErrors).length === 0 && isLoginSubmit ? (
-                    <div className="ui message success">
+                    <div className="ui-message-success">
                         Logged in successfully
                     </div>
                 ) : (
@@ -60,9 +60,7 @@ return errors;
                 </div>
                 <p>{fieldErrors.Password}</p>
                 <div>
-                <button onClick={()=>{
-                        console.log(LoginValidate(fieldValues));
-                    }} className="btn">Login</button>
+                <button className="btn">Login</button>
                 </div>
                 </form>
 
