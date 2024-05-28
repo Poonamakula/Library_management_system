@@ -5,7 +5,7 @@ import "./App.css";
 import "./Components/LoginPage";
 function Signup() {
     const [goToLogin,setGotoLogin]=React.useState(false)
-    const initialValues = {
+    const initialValues = { 
         username: "",
         email: "",
         phone:"",

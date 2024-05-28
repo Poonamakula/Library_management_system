@@ -1,16 +1,30 @@
 *{
     box-sizing:border-box;
 }
-.login-box{
+.bg-img {
+    background-image:url(https://t4.ftcdn.net/jpg/05/58/48/45/360_F_558484537_vyuk2C23spArvlDHWFv8Z9rTqzpMJk3t.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    margin-left: 500px;
     height: 60vh;
-    width: 40vw;
-    box-shadow: 2px 3px 16px;
+    background-color: rgb(241, 248, 249);
+    margin-left: 100px;
+    max-height: 800px;
+    text-align: center;
+    border-radius: 14px;
+    max-width: 600px;
+    width: 100%;
     border: 3px solid rgb(60, 214, 212);
 }
 input{

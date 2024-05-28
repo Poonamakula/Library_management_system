@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import "./Login.css";
+import "./AdminPg";
 function Login(){
    const loginFields={
     Username:"",
@@ -19,6 +21,8 @@ const handleLoginSubmit = (e) => {
             setFieldErrors(LoginValidate(fieldValues));
             setIsLoginSubmit(true);
         };
+const [gotoAdmin,setgotoAdmin]=useState(false);
+
 useEffect(() => {
     console.log(fieldErrors);
     if (Object.keys(fieldErrors).length === 0 && isLoginSubmit) {
@@ -37,10 +41,13 @@ if (!values.Password) {
 console.log(errors);
 return errors;
 };
+if (gotoAdmin){
+    return <Navigate to ="/AdminPg"/>
+}
     return (
-        <div >
+        <div className="bg-img">
+            <>
             <div className="login-box">
-            <h1>Login Page</h1>
             {Object.keys(fieldErrors).length === 0 && isLoginSubmit ? (
                     <div className="ui-message-success">
                         Logged in successfully
@@ -48,7 +55,9 @@ return errors;
                 ) : (
                     console.log("Entered Details", fieldValues)
                 )}
+          
                 <form onSubmit={handleLoginSubmit}>
+                <h1>Login Page</h1>
                     <div>
                 <label>Username</label>
                 <input type="text" name="Username" placeholder="Username" value={fieldValues.Username} onChange={handleValueChange}/><br/><br/>
@@ -60,11 +69,14 @@ return errors;
                 </div>
                 <p>{fieldErrors.Password}</p>
                 <div>
-                <button className="btn">Login</button>
+                <button className="btn" onClick={()=> {
+                    setgotoAdmin(true);
+                }}>Login</button>
                 </div>
                 </form>
 
             </div>
+            </>
         
         </div>
     );
