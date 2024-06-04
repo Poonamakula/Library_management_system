@@ -1,9 +1,10 @@
 import React from "react";
+import "./Admin.css";
 function Admin(){
     return (
-        <div>
-            <h1>Admin Page</h1>
+        <div className="content">
+         <button className="log-out">Log out</button>
         </div>
     )
 }
-export default Admin
+export default Admin;

@@ -1,0 +1,12 @@
+.content {
+   display: flex;
+ color: aquamarine;
+}
+.log-out {
+  height: 30px;
+  margin: 20px;
+  width: 70px;
+  border-radius: 4px;
+  background-color: brown;
+  color: white;
+}

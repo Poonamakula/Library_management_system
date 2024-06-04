@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 .bg-img {
-    background-image:url(https://t4.ftcdn.net/jpg/05/58/48/45/360_F_558484537_vyuk2C23spArvlDHWFv8Z9rTqzpMJk3t.jpg);
+    background-image:url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background-color: rgb(241, 248, 249);
+    background-color: white;
     margin-left: 100px;
     max-height: 800px;
     text-align: center;
@@ -37,7 +37,62 @@ input{
     margin: 20px;
     margin-left: 70px;
     color: aquamarine;
-    height: 50px;
+    height: 45px;
     border-radius: 8px;
     width: 100px;
+}
+@media  screen and (max-width: 460px) {
+    .login-box{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin-right:100px;
+    background-color: white;
+    }
+    .bg-img {
+        background-image:url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+        background-repeat: no-repeat;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+@media screen and (min-width: 344px){
+    .login-box{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        font-size: small;
+        width: 86vw;
+        margin-right:100px;
+        background-color: white;
+        }
+}
+@media screen and (min-width: 1024px){
+    .login-box{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        margin-right:100px;
+        background-color: white;
+        }
+      
+}
+@media  screen and (min-width: 768px ) {
+    .login-box{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        font-size: 15px;
+        background-color: white;
+    }
 }

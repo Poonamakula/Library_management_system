@@ -1,10 +1,10 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Navigate } from "react-router-dom";
 import "./App.css";
 import "./Components/LoginPage";
 function Signup() {
-    const [goToLogin,setGotoLogin]=React.useState(false)
+    const [goToLogin,setGotoLogin]=useState(false)
     const initialValues = { 
         username: "",
         email: "",
@@ -25,13 +25,7 @@ function Signup() {
                 e.preventDefault();
                 setFormErrors(validate(formValues));
                 setIsSubmit(true);
-            };
-    useEffect(() => {
-        console.log(formErrors);
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-            console.log(formValues);
-        }
-    }, [formErrors, formValues, isSubmit]);
+            };   
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -53,8 +47,8 @@ function Signup() {
         }
         if (!values.password) {
             errors.password = "Password is required!";
-        } else if (values.password.length < 4) {
-            errors.password = "Password must be more than 4 characters";
+        } else if (values.password.length < 6) {
+            errors.password = "Password must be more than 6 characters";
         } else if (values.password.length > 10) {
             errors.password = "Password cannot exceed more than 10 characters";
         }
@@ -65,51 +59,49 @@ function Signup() {
         return errors;
     };
      if (goToLogin){
-        return <Navigate to ="/LoginPage"/>
+        return <Navigate to ="/"/>
      } 
 
     return (
         <div className="bg-Img">
      <>      
-            <div className="container">
+        
                 {Object.keys(formErrors).length === 0 && isSubmit ? (
-                    <div className="ui message success">
-                        Signed in successfully
-                    </div>
+                    console.log("Signed in successfully")
                 ) : (
                     console.log("Entered Details", formValues)
                 )}
-
+               
+                   <div className="container">
+                  
                 <form onSubmit={handleSubmit}>
-                    <h1>Sign Up</h1>
-                    <div className="ui form">
-                        <div className="field">
-                            <label>Username</label> 
-                            <input
+               <h1>Sign up</h1>
+                            <div>
+                            <label for="username">Username </label> 
+                            <input id="username"
+                            className="fix"
                                 type="text"
                                 name="username"
                                 placeholder="Choose a username"
                                 value={formValues.username}
-                                onChange={handleChange} style={{marginLeft:"70px"}}
+                                onChange={handleChange} 
                             />
-                          
                         </div>
-                        <p>{formErrors.username}</p>
-                        <div className="field">
-                            <label>Email</label>
-                            <input
+                        <p className="align">{formErrors.username}</p>
+                        <div >
+                            <label for="email">Email </label>
+                            <input id="email"
                                 type="text"
                                 name="email"
                                 placeholder="Email"
                                 value={formValues.email}
-                                onChange={handleChange} style={{marginLeft:"100px"}}
+                                onChange={handleChange} style={{marginLeft:"110px"}} 
                             />
-                       
                         </div>
-                        <p>{formErrors.email}</p>
-                        <div className="field">
-                            <label>Phone</label>
-                            <input
+                        <p style={{marginLeft:"100px"}}>{formErrors.email}</p>
+                        <div >
+                            <label for="phone">Phone </label>
+                            <input id="phone"
                                 type="text"
                                 name="phone"
                                 placeholder="Phone No"
@@ -117,21 +109,23 @@ function Signup() {
                                 onChange={handleChange} style={{marginLeft:"95px"}}
                             />
                         </div>
-                        <p>{formErrors.phone}</p>
-                        <div className="field">
-                            <label>Address</label>
+                        <p  style={{marginLeft:"170px"}}>{formErrors.phone}</p>
+                        <div>
+                            <label for="Address">Address </label>
                             <input
+                                id="Address"
                                 type="text"
                                 name="address"
                                 placeholder="Address"
                                 value={formValues.address}
                                 onChange={handleChange} style={{marginLeft:"88px"}}
                             />
-                        </div>
-                        <p>{formErrors.address}</p>
-                        <div className="field">
-                            <label>Password</label>
+                     </div>
+                        <p style={{marginLeft:"120px"}}>{formErrors.address}</p>
+                        <div>
+                            <label for="password">Password </label>
                             <input
+                             id="password"
                                 type="password"
                                 name="password"
                                 placeholder="Password"
@@ -139,10 +133,10 @@ function Signup() {
                                 onChange={handleChange} style={{marginLeft:"80px"}}
                             />
                         </div>
-                        <p>{formErrors.password}</p>
-                        <div className="field">
-                            <label>Confirm Password</label>
-                            <input
+                        <p className="align">{formErrors.password}</p>
+                        <div>
+                            <label  className="fix2">Confirm Password</label>
+                            <input className="cp"
                                 type="password"
                                 name="confirmPassword"
                                 placeholder="Confirm password"
@@ -150,15 +144,15 @@ function Signup() {
                                 onChange={handleChange} style={{marginRight:"50px"}}
                             />
                         </div>
-                        <p>{formErrors.confirmPassword}</p>
-                        <button className="fluid ui button blue">Submit</button>
-                    </div>
+                        <p className="align">{formErrors.confirmPassword}</p>
+                        <button className="button">Submit</button>
+                    
                 </form>
                 <div className="text">
-                    Already have an account? 
+                   Already have an account? 
                     <button onClick={()=>{
                         setGotoLogin(true);
-                    }}>Login</button>
+                    }} style={{marginTop:"10px"}} className="login-button">Login</button>
                 </div>
             </div>
         </>
