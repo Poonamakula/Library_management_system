@@ -1,0 +1,504 @@
+* {
+  box-sizing: border-box;
+}
+.bg-Img {
+  background: url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 50px;
+}
+
+.container {
+     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 660px !important;
+    margin-top: -10px;
+    background-color: #ffffff;
+    margin-left: 400px !important;
+    max-height: 900px ;
+    text-align: center;
+    border-radius: 14px;
+    width: 500px !important;
+    border: 3px solid rgb(60, 214, 212);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  height: 900px;
+  max-height: 900px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: -70px;
+}
+h1 {
+  margin-top: -30px !important;
+}
+input {
+  padding-top: 10px;
+  width: 160px !important;
+  padding-bottom: 10px;
+  border-radius: 9%;
+}
+
+.button {
+  background: #05b462;
+  padding: 5px;
+  margin-top: -20px ;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+.align {
+  margin-left: 130px ;
+}
+p {
+  margin-top: 0px;
+  color: rgb(255, 0, 0);
+}
+
+.text {
+ margin-top: -20px !important;
+  color: #010101;
+  margin-bottom: 30px;
+}
+
+.cp{
+  margin-bottom: 20px;
+}
+.fix{
+  margin-left:70px;
+}
+.fix2{
+  margin-left:50px ;
+}
+
+@media  screen and (min-width: 401px) and (max-width:460px) {
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 800px;
+   margin-top: auto;
+   margin-left: -30px;
+   background-color: #ffffff;
+   max-height: 800px ;
+   text-align: center;
+   border-radius: 14px;
+   width: 380px;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ margin-top: 50px !important;
+ margin-left: 0px;
+ justify-content: center;
+ align-items: center;
+ border-radius: 14px;
+ height: 900px;
+ max-height: 900px;
+ text-align: center;
+}
+
+input {
+  width: 130px;
+  border-radius: 9%;
+}
+.bg-Img {
+  background: url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 99vw ;
+  height: 100vh ;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 50px;
+}
+.text {
+  margin-top: 10px;
+  margin-bottom: 0px;
+   color: #010101;
+  
+ }
+ .login-button {
+  margin-bottom: 10px;
+ }
+ .button {
+  background: #05b462;
+  padding: 5px;
+  margin-bottom: -80px;
+  border-radius: 10px;
+  width: 60%;
+  cursor: pointer;
+}
+.cp{
+  margin-bottom: 20px;
+  margin-left: 14px;
+}
+.fix{
+  margin-left:70px;
+}
+.fix2{
+  margin-left:50px ;
+}
+h1{
+  margin-top: 0px;
+}
+
+
+
+}
+@media screen and (min-width: 344px) and (max-width: 400px){
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 500px !important;
+   max-height: 700px;
+   background-color: #ffffff;
+  margin-left: 0px !important;
+  margin-right: 20px;
+   text-align: center;
+   border-radius: 14px;
+   width: 330px;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 14px;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+}
+.bg-Img {
+  background-image:url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  width: 110vw;
+  height: 150vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.button {
+  background: #05b462;
+  padding: 5px;
+  margin-bottom: -80px;
+  border-radius: 10px;
+  width: 60%;
+  cursor: pointer;
+}
+input {
+  width: 130px;
+  border-radius: 9%;
+}
+.text {
+  margin-top: 19px;
+  margin-bottom: 0px;
+  color: #010101;
+  
+ }
+ .login-button {
+  margin-bottom: 20px;
+ }
+
+
+}
+@media screen and (min-width: 1024px) and (height:1366px){
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 900px !important;
+   margin-top: 100px;
+   background-color: #ffffff;
+   margin-left: 120px !important;
+   max-height: 900px ;
+   text-align: center;
+   border-radius: 14px;
+   width: 700px !important;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-size: 26px !important;
+ border-radius: 14px;
+ height: 900px;
+ max-height: 900px;
+ text-align: center;
+ margin-left: 10px;
+ margin-top: -70px;
+}
+.text {
+  margin-top: 10px;
+  font-size: 24px !important;
+  margin-bottom: 0px;
+   color: #010101;
+  
+ }
+ .login-button {
+  font-size: 24px !important;
+  margin-bottom: 10px;
+ }
+input {
+  width: 233px !important;
+  font-size: 20px;
+}
+.button {
+  font-size: 24px !important;
+}
+
+}
+@media  screen and (min-width: 768px ) and (max-width:800px){
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 900px !important;
+   max-height: 2000px;
+   margin-top: 40px;
+   background-color: #ffffff;
+   margin-left: 90px;
+   text-align: center;
+   border-radius: 14px;
+   width: 600px !important;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 14px;
+ max-height: 2000px;
+ font-size: 26px !important;
+ height: 1000px;
+ text-align: center;
+ margin-left: 0px;
+ margin-top: -70px;
+}
+.bg-Img {
+  background-image:url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  width: 130vw;
+  height: 130vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+input {
+  width: 200px !important;
+  font-size: 20px;
+  border-radius: 9%;
+}
+.text {
+  margin-top: -90px;
+  color: #010101;
+  margin-bottom: 30px;
+  
+ }
+.button {
+  font-size: 20px;
+}
+.login-button{
+  font-size: 20px;
+}
+.text{
+  font-size: 28px;
+}
+}
+@media  screen and (min-width: 801px) and (max-width: 900px) {
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 1000px !important;
+   max-height: 2000px;
+   margin-top: 40px;
+   background-color: #ffffff;
+   margin-left: 10px;
+   text-align: center;
+   border-radius: 14px;
+   width: 600px !important;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 14px;
+ max-height: 2000px;
+ font-size: 26px !important;
+ height: 1000px;
+ text-align: center;
+ margin-left: 0px;
+ margin-top: -70px;
+}
+.bg-Img {
+  background-image:url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+input {
+  width: 222px !important;
+  font-size: 20px;
+  border-radius: 9%;
+}
+.text {
+  margin-top: -90px;
+  color: #010101;
+  margin-bottom: 30px;
+  
+ }
+.button {
+  font-size: 20px;
+}
+.login-button{
+  font-size: 20px;
+}
+.text{
+  font-size: 28px;
+}
+p {
+  margin-left: 120px !important;
+}
+
+}  
+@media  screen and (min-width: 540px) {
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 620px;
+   margin-left: 20px;
+   background-color: #ffffff;
+   text-align: center;
+   border-radius: 14px;
+   width: 400px;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ margin-top: 50px !important;
+ margin-left: 0px;
+ font-size: medium;
+ justify-content: center;
+ align-items: center;
+ border-radius: 14px;
+ height: 600px;
+ text-align: center;
+}
+
+input {
+  width: 130px;
+  border-radius: 9%;
+}
+.bg-Img {
+  background: url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 99vw ;
+  height: 100vh ;
+  background-attachment: fixed;
+  margin: 0px;
+  padding: 50px;
+}
+.text {
+ margin-top: 0px;
+  margin-bottom: 0px;
+   color: #010101;
+  
+ }
+ .login-button {
+  margin-top: 20px;
+  margin-bottom: 50px;
+ }
+ .button {
+  background: #05b462;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 60%;
+  cursor: pointer;
+}
+}
+@media  screen and (max-width: 1240px) and (height:600px) {
+  .container {
+    display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   height: 570px !important;
+   margin-top: -30px;
+   background-color: #ffffff;
+   margin-left: 120px !important;
+   text-align: center;
+   border-radius: 14px;
+   width: 700px !important;
+   border: 3px solid rgb(60, 214, 212);
+}
+form {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-size: 18px !important;
+ border-radius: 14px;
+ height: 900px;
+ max-height: 900px;
+ text-align: center;
+ margin-left: 10px;
+ margin-top: -70px;
+}
+.text {
+  margin-top: -17px;
+  font-size: 17px !important;
+  margin-bottom: 0px;
+   color: #010101;
+  
+ }
+ .login-button {
+  font-size: 17px !important;
+margin-top: 0px !important;
+ }
+input {
+  width: 233px !important;
+  font-size: 20px;
+}
+.button {
+  margin-top: -20px;
+  font-size: 14px !important;
+}
+h1 {
+  margin-top: -40px;
+}
+}
+
