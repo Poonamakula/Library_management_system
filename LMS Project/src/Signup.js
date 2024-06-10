@@ -20,12 +20,34 @@ function Signup() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value });
+        setFormErrors(validate({ ...formValues, [name]: value }));
     };
     const handleSubmit = (e) => {
                 e.preventDefault();
-                setFormErrors(validate(formValues));
                 setIsSubmit(true);
-            };   
+                const errors = validate(formValues);
+                if (Object.keys(errors).length === 0) {
+                    console.log("Form submitted successfully:", formValues);
+                } else {
+                    console.log("Form has errors:", errors);
+                }
+                let validationErrors={};
+        let isValid=true;
+
+    for (const key in formValues) {
+                validate(key, formValues[key]);
+                if (!formValues[key] || formErrors[key]) {
+                  isValid = false;
+                  validationErrors[key] = formErrors[key]  || 'value is required';
+                }
+                }
+
+              setFormErrors(validationErrors);
+              if (isValid) {
+                console.log("Sign up is successfull");
+                          
+            } 
+        };   
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -64,19 +86,16 @@ function Signup() {
 
     return (
         <div className="bg-Img">
-     <>      
-        
-                {Object.keys(formErrors).length === 0 && isSubmit ? (
+             {Object.keys(formErrors).length === 0 && isSubmit ? (
                     console.log("Signed in successfully")
                 ) : (
                     console.log("Entered Details", formValues)
                 )}
-               
-                   <div className="container">
-                  
+                   <>              
+                   <div className="container">    
                 <form onSubmit={handleSubmit}>
                <h1>Sign up</h1>
-                            <div>
+                            <div className="field">
                             <label for="username">Username </label> 
                             <input id="username"
                             className="fix"
@@ -88,7 +107,7 @@ function Signup() {
                             />
                         </div>
                         <p className="align">{formErrors.username}</p>
-                        <div >
+                        <div className="field">
                             <label for="email">Email </label>
                             <input id="email"
                                 type="text"
@@ -98,8 +117,8 @@ function Signup() {
                                 onChange={handleChange} style={{marginLeft:"110px"}} 
                             />
                         </div>
-                        <p style={{marginLeft:"100px"}}>{formErrors.email}</p>
-                        <div >
+                        <p style={{marginLeft:"120px"}}>{formErrors.email}</p>
+                        <div className="field">
                             <label for="phone">Phone </label>
                             <input id="phone"
                                 type="text"
@@ -110,7 +129,7 @@ function Signup() {
                             />
                         </div>
                         <p  style={{marginLeft:"170px"}}>{formErrors.phone}</p>
-                        <div>
+                        <div className="field">
                             <label for="Address">Address </label>
                             <input
                                 id="Address"
@@ -121,8 +140,8 @@ function Signup() {
                                 onChange={handleChange} style={{marginLeft:"88px"}}
                             />
                      </div>
-                        <p style={{marginLeft:"120px"}}>{formErrors.address}</p>
-                        <div>
+                        <p style={{marginLeft:"125px"}}>{formErrors.address}</p>
+                        <div className="field">
                             <label for="password">Password </label>
                             <input
                              id="password"
@@ -133,8 +152,8 @@ function Signup() {
                                 onChange={handleChange} style={{marginLeft:"80px"}}
                             />
                         </div>
-                        <p className="align">{formErrors.password}</p>
-                        <div>
+                        <p style={{marginLeft:"145px"}}>{formErrors.password}</p>
+                        <div className="field">
                             <label  className="fix2">Confirm Password</label>
                             <input className="cp"
                                 type="password"
@@ -146,14 +165,14 @@ function Signup() {
                         </div>
                         <p className="align">{formErrors.confirmPassword}</p>
                         <button className="button">Submit</button>
-                    
                 </form>
-                <div className="text">
-                   Already have an account? 
+                <div>
+                  <h6 className="text">Already have an account? </h6> 
                     <button onClick={()=>{
                         setGotoLogin(true);
-                    }} style={{marginTop:"10px"}} className="login-button">Login</button>
+                    }} style={{marginTop:"10px"}} className="log-button">Login</button>
                 </div>
+                
             </div>
         </>
         </div>

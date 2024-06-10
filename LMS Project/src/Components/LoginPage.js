@@ -45,15 +45,16 @@ if (gotoAdmin) {
     return (
         <div className="bg-img">
             <>
+            <h1>Login Page</h1>
             <div className="login-box">
             {Object.keys(fieldErrors).length === 0 && isLoginSubmit ? (
                    setgotoAdmin(true)
                 ) : (
                     console.log("Entered Details", fieldValues)
                 )}
-          
+              
                 <form onSubmit={handleLoginSubmit}>
-                <h1>Login Page</h1>
+           
                     <div>
                 <label>Username</label>
                 <input type="text" name="Username" placeholder="Username" value={fieldValues.Username} onChange={handleValueChange}/><br/><br/>
