@@ -1,0 +1,55 @@
+.manage-books {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+.Edit-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    width: 80px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.Delete-button {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.Edit-button:hover {
+    background-color: #45a049;
+}
+
+.Delete-button:hover {
+    background-color: #d32f2f;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+}
